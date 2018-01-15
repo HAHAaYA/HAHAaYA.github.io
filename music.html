@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>21'Music(runoob.com)</title>
+</head>
+<body style="background-color:pink;">
+
+	<a href="21.html" ><img src="img/back.png" style="background-color: yellow;float:left;" width="32" height="32" ></a>
+
+	<h1><span  style="font-size: 5;background-color: black;color:white;">Stop！Listen.</span></h1>
+	<h2 style="font-size: 8;color:yellow;text-align:center;background-color: black;">Charlie Puth - One Call Away</h2>
+
+	<p style="text-align:center " >
+		<object height="55" width="750" data="Charlie Puth - One Call Away.mp3" ></object>
+	</p>
+
+<style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #lunbotu {
+                width: 750px;
+                height: 750px;
+                overflow: hidden;
+                position: relative;
+                margin: 0px auto;
+                /*position: relative;*/
+            }
+
+            #banner {
+                height: 460px;
+                width: 3750px;
+                position: absolute;
+                transition: 2s;
+                left: 0px;
+            }
+
+            #banner img {
+                float: left;
+            }
+
+            #biao {
+                position: absolute;
+                top: 650px;
+                left: 38%;
+             /* margin-left: -90px;*/
+            }
+
+            #biao_1 {
+                height: 20px;
+                width: 20px;
+                border: 1px solid #000;
+                z-index: 10;
+                float: left;
+                list-style: none;
+                border-radius: 50%;
+                margin-left: 20px;
+                text-align: center;
+                cursor:pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="lunbotu">
+            <div id="banner">
+                <img class="m" src="img/cha4.jpg" />
+                <img class="m" src="img/cha.jpg" />
+                <img class="m" src="img/cha3.jpg" />
+                <img class="m" src="img/cha2.jpg" />
+                <img class="m" src="img/cha1.jpg" />
+            </div>
+            <div id="biao">
+                <ul>
+                    <li id="biao_1">1</li>
+                    <li id="biao_1">2</li>
+                    <li id="biao_1">3</li>
+                    <li id="biao_1">4</li>
+                    <li id="biao_1">5</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        var slid = document.getElementById("banner");
+        //var id = document.getElementById("bt");
+        var imgwidth = document.getElementsByClassName("m");
+        var oli=document.getElementsByTagName("li");
+        //console.log(oli);
+        //console.log(imgwidth );
+        var i =0;
+        auto();
+        oli[0].style.cssText="background:#ff6700;color:#fff;";
+        function auto(){
+
+            time = setInterval(function(){
+                i++;
+            if(i <= 4) {
+                slid.style.left = slid.offsetLeft - 750 + "px";
+                oli[i].style.cssText="background:#ff6700;color:#fff;";
+                oli[i-1].style.cssText="background:none;color:#000;";
+            } else {
+                slid.style.left ="0px";
+                oli[4].style.cssText="background:none;color:#000;";
+                oli[0].style.cssText="background:#ff6700;color:#fff;";
+                i=0;
+            }
+            console.log(i);
+
+        }, 3000)
+
+        }
+
+            for(var j=0;j<=4;j++){
+                //console.log(imgwidth[j].index);
+            imgwidth[j].index=j;
+            oli[j].index=j;
+            oli[j].onmouseover=function(){
+                this.style.cssText="background:#ff6700;color:#fff;"    
+                this.onmouseout=function(){
+                    this.style.cssText="background:none;color:#000;"
+                }
+            }
+
+            oli[j].onclick=function(){
+                clearInterval(time);
+                m=this.index;
+                slid.style.left=-m*750+"px";    
+                i=m;
+                auto();
+                console.log(i);
+            }
+            }    
+
+    </script>
+    </br>
+    <p style="text-align:center " >查理·普斯（Charlie Puth），1991年12月2日出生于美国新泽西州，毕业于亚利桑那西部学院。
+</br>
+         身高:180cm（ 他两岁的时候被狗咬到了（好像有咬到眼睛），头部也受伤，之后眉毛就那样了。
+</br>
+         2011年，查理·普斯将翻唱的歌曲上传至Youtube，由此获得了上百万的点击量。
+</br>
+         2013年10月，发布个人原创专辑《Ego》。2015年2月10日，发行与梅根·特瑞娜合作的单曲《Marvin Gaye》。
+</br>
+         3月17日，发行与维兹·卡利法合作的单曲《See You Again》，该单曲在公告牌百强单曲榜获得冠军。
+</br>
+         2016年1月，发行首张专辑《Nine Track Mind》。
+</br>         
+         代表作品Marvin Gaye、See You Again、One Call Away、Nine Track Mind
+ </p>
+
+	<a href="#" id="toTop" class="drop-in"><img src="img/drop.png" alt=" "></a>
+
+
+</body>
+</html>
