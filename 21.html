@@ -15,6 +15,8 @@
 <!-- Styles -->
 <link rel="stylesheet" type="text/css" href="css/yellowmoon-font.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-frm.css">
+
 </head>
 <body>
 
@@ -39,17 +41,64 @@
 			</figure>
 
 			<span class="h3 -white">Welcome to the  1421172221'Room</span>
+</br>
+</br>
+</br>
+			<span class="h1 -yellow">_(:зゝ∠)_... ...</span>
 
-			<span class="h1 -yellow">HAHAHAHAHAHAHA!!!</span>
+        <script language="JavaScript">
+            function startTime()   
+            {   
+                var today=new Date();//定义日期对象   
+                var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+                var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年    
+                var dd = today.getDate();//通过日期对象的getDate()方法返回年     
+                var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+                var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+                var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+                // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+                MM=checkTime(MM);
+                dd=checkTime(dd);
+                mm=checkTime(mm);   
+                ss=checkTime(ss);    
+                var day; //用于保存星期（getDay()方法得到星期编号）
+                if(today.getDay()==0)   day   =   "星期日 " 
+                if(today.getDay()==1)   day   =   "星期一 " 
+                if(today.getDay()==2)   day   =   "星期二 " 
+                if(today.getDay()==3)   day   =   "星期三 " 
+                if(today.getDay()==4)   day   =   "星期四 " 
+                if(today.getDay()==5)   day   =   "星期五 " 
+                if(today.getDay()==6)   day   =   "星期六 " 
+                document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
+                setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 
+            }   
+             
+            function checkTime(i)   
+            {   
+                if (i<10){
+                    i="0" + i;
+                }   
+                  return i;
+            }  
+        </script>
+    </head>
+    <body onload="startTime()">
+        <font color="black"><span class="h3 -white" id="nowDateTimeSpan"></span></font> 
+    </body>
 
-			<a href="javascript:void(0)" class="button">MY MY MY</a>
+<!-- 			<a href="javascript:void(0)" class="button">MY MY MY</a> -->
 
+</br>
+</br>
+</br>
+</br>
 			<a href="#about" class="chevron-down smoothScroll">
 				<img class="icon" src="img/chevron_down_white.svg" title="Scroll down" alt="Chevron pointing downwards">
 				<span class="sr-only">Scroll down</span>
 			</a>
 
 		</div>
+
 
 	</section> <!-- /.home -->
 
@@ -79,8 +128,8 @@
 			  
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a class="smoothScroll" href="#home">Home <span class="sr-only">(current)</span></a></li>
-					<li><a class="smoothScroll" href="#about">About me</a></li>
-					<li><a class="smoothScroll" href="#Message">Message</a></li>
+					<li class="active"><a class="smoothScroll" href="#about">About me <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a class="smoothScroll" href="#Message">Message <span class="sr-only">(current)</span></a></li>
 				</ul>
 
 			</div> <!-- /.navbar-collapse -->
@@ -102,7 +151,7 @@
 					<!-- Section title -->
 					<h2 class="title -black">About me</h2>
 
-					<span class="subtitle h3 -yellow">这是一段自我介绍。</span>
+					<span class="subtitle h3 -yellow">假装这里有一段自我介绍。</span>
 
 				</div>
 
@@ -117,9 +166,9 @@
 						<h3 class="title -one -black">喜好</h3>
 
 						<nav class="desc">
-  							 <a href="movie.html">电影</a> |
+  							 <a href="movie.html">影视</a> |
  							 <a href="music.html">音乐</a> |
-  							 <a href="book.html">书本</a>
+  							 <a href="book.html">书籍</a>
 						</nav>
 
 					</div> <!-- /.about-box -->
@@ -133,8 +182,7 @@
 						<h3 class="title -two -black">生活</h3>
 
 						<nav class="desc">
-  							 <a href="/css/">美食</a> |
- 							 <a href="music.html">游玩</a> 
+  							 <a href="life.html">美食 & 游玩</a>
 						</nav>
 
 					</div> <!-- /.about-box -->
@@ -148,8 +196,7 @@
 						<h3 class="title -three -black">作品</h3>
 
 						<nav class="desc">
-  							 <a href="/css/">平面</a> |
- 							 <a href="music.html">三维</a> 
+  							 <a href="work.html">平面 & 三维</a>
 						</nav>
 
 					</div> <!-- /.about-box -->
@@ -159,9 +206,68 @@
 			</div> <!-- /.row -->
 
 		</div> <!-- /.box-container -->
+
+
+	<section id="Message" class="Message">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2">
+
+					<!-- Section title -->
+					<hr style="height:1px;border:none;border-top:1px solid yellow;" />
+					<h2 class="title -black">Message</h2>
+
+					<span class="subtitle h3 -yellow">这是一段关于最近发生的事。</span>
+
+				</div>
+
+			</div> <!-- /.row --></br>
+</br>
+			<img style="text-align:center" src="img/IMG1.gif" >
+
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+	<form action="" method="post" class="bootstrap-frm">
+		<h1>Leave a message.
+			<span>＞人＜~~~~~YO~~MAN!~.</span>
+		</h1>
+	<label>
+		<span>Your Name :</span>
+			<input id="name" type="text" name="name" placeholder="Your Full Name" />
+	</label>
+	<label>
+		<span>Your Email :</span>
+			<input id="email" type="email" name="email" placeholder="Valid Email Address" />
+	</label>
+	<label>
+		<span>Message :</span>
+			<textarea id="message" name="message" placeholder="Your Message to Us"></textarea>
+	</label>
+	<label>
+		<span>Subject :</span><select name="selection">
+			<option value="Job Inquiry">Job Inquiry</option>
+			<option value="General Question">General Question</option>
+	</select>
+	</label>
+		<label>
+			<span>&nbsp;</span>
+				<input type="button" class="button" value="Send" />
+	</label>
+	</form>
+
 			<a href="#" id="toTop" class="drop-in"><img src="img/drop.png" alt=" "></a>
 
 	</section> <!-- /.about -->
+
 
 
 </body>

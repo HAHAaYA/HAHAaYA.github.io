@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>21'Music(runoob.com)</title>
+</head>
+<body style="background-color:white;">
+
+	<a href="21.html" ><img src="img/back.png" style="background-color: #778899;float:left;" width="32" height="32" ></a>
+
+	<h1><span  style="font-size: 5;background-color: #778899;color:white;">|｡･･)っ♪ Fantastic Music.</span></h1>
+    </br>
+	<h2 style="font-size: 8;color:white;text-align:center;background-color: #778899;">脸红的思春期 - 送你宇宙</h2>
+
+
+    <p style="text-align:center " >
+    <audio controls>
+        <source src="脸红的思春期 - 送给你宇宙.ogg" type="audio/ogg">
+        <source src="脸红的思春期 - 送给你宇宙.mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+    </audio>
+    </p>
+    <div>   
+         <a href="music.html" ><img src="img/prev.png" alt="next" style="float:left;clear:both;" width="50" height="50" ></a>
+    </div>
+
+<style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #lunbotu {
+                width: 500px;
+                height: 500px;
+                overflow: hidden;
+                position: relative;
+                margin: 0px auto;
+                /*position: relative;*/
+            }
+
+            #banner {
+                height: 460px;
+                width: 2500px;
+                position: absolute;
+                transition: 2s;
+                left: 0px;
+            }
+
+            #banner img {
+                float: left;
+            }
+
+            #biao {
+                position: absolute;
+                top: 450px;
+                left: 38%;
+             /* margin-left: -90px;*/
+            }
+
+            #biao_1 {
+                height: 20px;
+                width: 20px;
+                border: 1px solid #000;
+                z-index: 10;
+                float: left;
+                list-style: none;
+                border-radius: 50%;
+                margin-left: 20px;
+                text-align: center;
+                cursor:pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="lunbotu" style="clear: both;">
+            <div id="banner">
+                <img class="m" src="img/lh1.jpg" />
+                <img class="m" src="img/lh5.jpg" />
+                <img class="m" src="img/lh2.jpg" />
+                <img class="m" src="img/lh3.jpg" />
+                <img class="m" src="img/lh6.jpg" />
+            </div>
+            <div id="biao">
+                <ul>
+                    <li id="biao_1">1</li>
+                    <li id="biao_1">2</li>
+                    <li id="biao_1">3</li>
+                    <li id="biao_1">4</li>
+                    <li id="biao_1">5</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        var slid = document.getElementById("banner");
+        //var id = document.getElementById("bt");
+        var imgwidth = document.getElementsByClassName("m");
+        var oli=document.getElementsByTagName("li");
+        //console.log(oli);
+        //console.log(imgwidth );
+        var i =0;
+        auto();
+        oli[0].style.cssText="background:#ff6700;color:#fff;";
+        function auto(){
+
+            time = setInterval(function(){
+                i++;
+            if(i <= 4) {
+                slid.style.left = slid.offsetLeft - 500 + "px";
+                oli[i].style.cssText="background:#ff6700;color:#fff;";
+                oli[i-1].style.cssText="background:none;color:#000;";
+            } else {
+                slid.style.left ="0px";
+                oli[4].style.cssText="background:none;color:#000;";
+                oli[0].style.cssText="background:#ff6700;color:#fff;";
+                i=0;
+            }
+            console.log(i);
+
+        }, 3000)
+
+        }
+
+            for(var j=0;j<=4;j++){
+                //console.log(imgwidth[j].index);
+            imgwidth[j].index=j;
+            oli[j].index=j;
+            oli[j].onmouseover=function(){
+                this.style.cssText="background:#ff6700;color:#fff;"    
+                this.onmouseout=function(){
+                    this.style.cssText="background:none;color:#000;"
+                }
+            }
+
+            oli[j].onclick=function(){
+                clearInterval(time);
+                m=this.index;
+                slid.style.left=-m*500+"px";    
+                i=m;
+                auto();
+                console.log(i);
+            }
+            }    
+
+    </script>
+    </br>
+        <font size="4" face="新蒂小丸子小学版">
+    <p style="text-align:center " >
+        줄게 my Galaxy</br>
+        把我的宇宙给你</br>
+        Like a star 내리는 비처럼</br>
+        像星星一样 像下落的雨一样</br>
+        반짝이는 널 가지고 싶어 Get ma mind</br>
+        想拥有发着光的你</br>
+        엄지와 검지만 해도</br></br>
+   <u> 脸红的思春期是由安智英(主唱)，禹志润(贝斯, 吉他, 副主唱,rap)组成的二人女子乐队，
+</br>
+    于2016年4月22日通过Half Album“RED ICKLE”正式出道。为作词、作曲、演奏全能的实力派新人女子组合。
+    </br>
+    粉丝称呼:脸红、胭脂
+</br>
+代表作品 《우주를 줄게（给你宇宙）》、《 You（＝I）》
+</br>
+《给你宇宙》是韩国组合脸红的思春期演唱的一首歌曲，
+</br>该曲目收录在专辑《Full Album RED PLANET》中。该歌曲发布于2016年08月29日。
+</br>
+ </p></u>
+ </font>
+
+	<a href="#" id="toTop" class="drop-in"><img src="img/drop.png" alt=" "></a>
+
+
+</body>
+</html>

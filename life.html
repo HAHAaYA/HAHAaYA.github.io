@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>21'Life(runoob.com)</title>
+<link href="css/lrtk.css" media="screen" rel="stylesheet" />
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function(){
+   var spotlight = {
+     // Í¼Æ¬µÄÍ¸Ã÷¶È£¬Èç¹ûÄãÏ²»¶¿ÉÒÔÐÞ¸ÄËü¡£
+    opacity : 0.2,
+    /*the vars bellow are for width and height of the images so we can make 
+    the <li> same size */
+    imgWidth : $('.spotlightWrapper ul li').find('img').width(), 
+    imgHeight : $('.spotlightWrapper ul li').find('img').height() 
+
+   };
+
+   //set the width and height of the list items same as the images
+   $('.spotlightWrapper ul li').css({ 'width' : spotlight.imgWidth, 'height' : spotlight.imgHeight });
+
+   //when mouse over the list item...
+   $('.spotlightWrapper ul li').hover(function(){
+
+    //...find the image inside of it and add active class to it and change opacity to 1 (no transparency)
+    $(this).find('img').addClass('active').css({ 'opacity' : 1});
+
+    //get the other list items and change the opacity of the images inside it to the one we have set in the spotlight array 
+    $(this).siblings('li').find('img').css({'opacity' : spotlight.opacity}) ;
+
+    //when mouse leave...
+   }, function(){
+
+    //... find the image inside of the list item we just left and remove the active class
+    $(this).find('img').removeClass('active');
+
+   });
+
+   //when mouse leaves the unordered list...
+   $('.spotlightWrapper ul').bind('mouseleave',function(){
+    //find the images and change the opacity to 1 (fully visible)
+    $(this).find('img').css('opacity', 1);
+   });
+
+  });
+ </script>
+<style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #lunbotu {
+                width: 1219px;
+                height: 570px;
+                overflow: hidden;
+                position: relative;
+                margin: 0px auto;
+                /*position: relative;*/
+            }
+
+            #banner {
+                height: 460px;
+                width: 6095px;
+                position: absolute;
+                transition: 2s;
+                left: 0px;
+            }
+
+            #banner img {
+                float: left;
+            }
+
+            #biao {
+                position: absolute;
+                top: 500px;
+                left: 40%;
+             /* margin-left: -90px;*/
+            }
+
+            #biao_1 {
+                height: 20px;
+                width: 20px;
+                border: 1px solid yellow;
+                z-index: 10;
+                float: left;
+                list-style: none;
+                border-radius: 50%;
+                margin-left: 20px;
+                text-align: center;
+                cursor:pointer;
+            }
+
+        </style>
+</head>
+<body style="background-color: white;">
+
+    <a href="21.html" ><img src="img/back.png" style="background-color: #778899;float:left;" width="35" height="35" ></a>
+
+    <h1><span  style="font-size: 5;background-color: #778899;color:white;">٩( ᐛ )وIt's my Life.</span></h1>
+
+</br>
+        <div id="lunbotu" style="clear: both;">
+            <div id="banner">
+                <img class="m" src="img/tu06.jpg" />
+            </div>
+        </div>
+    </script>
+        </br>
+<div class='spotlightWrapper' >
+  <!-- start unordered list -->
+  <ul >
+   <li><img src='img/z01.jpg' /></li>
+   <li><img src='img/z02.jpg' /></li>
+   <li><img src='img/z03.jpg' /></li>
+   <li><img src='img/z04.jpg' /></li>
+   <li><img src='img/z05.jpg' /></li>
+   <li><img src='img/z06.jpg' /></li> 
+   <li><img src='img/z07.jpg' /></li>
+   <li><img src='img/z08.jpg' /></li>
+   <li><img src='img/z09.jpg' /></li>
+   <li><img src='img/z10.jpg' /></li>
+   <li><img src='img/z11.jpg' /></li>
+   <li><img src='img/z12.jpg' /></li>
+   <li><img src='img/z13.jpg' /></li>
+   <li><img src='img/z14.jpg' /></li>
+   <li><img src='img/z15.jpg' /></li>
+   <li><img src='img/z16.jpg' /></li>
+   <div class='clear'></div>
+  </ul>
+  <!-- end unordered list -->
+ </div></br></br></br>
+                <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+</div>
+</br></br></br>
+        <div id="lunbotu" style="clear: both;">
+            <div id="banner">
+                <img class="m" src="img/tu07.jpg" />
+            </div>
+        </div>
+    </script>
+        </br>
+<div class='spotlightWrapper' >
+  <!-- start unordered list -->
+  <ul >
+   <li><img src='img/z17.jpg' /></li>
+   <li><img src='img/z18.jpg' /></li>
+   <li><img src='img/z19.jpg' /></li>
+   <li><img src='img/z20.jpg' /></li>
+   <li><img src='img/z21.jpg' /></li>
+   <div class='clear'></div>
+  </ul>
+  <!-- end unordered list -->
+ </div></br></br></br>
+                <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+</div></br></br></br>
+
+
+    <a href="#" id="toTop" class="drop-in"><img src="img/drop.png" alt=" "></a>
+
+
+</body>
+</html>

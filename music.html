@@ -3,17 +3,30 @@
 <head>
 <meta charset="utf-8">
 <title>21'Music(runoob.com)</title>
+<link rel="icon" href="img/logo.ico" type="image/x-icon"/>
 </head>
-<body style="background-color:pink;">
+<body style="background-color:white;">
 
-	<a href="21.html" ><img src="img/back.png" style="background-color: yellow;float:left;" width="32" height="32" ></a>
+	<a href="21.html" ><img src="img/back.png" style="background-color: #778899;float:left;" width="32" height="32" ></a>
 
-	<h1><span  style="font-size: 5;background-color: black;color:white;">Stop！Listen.</span></h1>
-	<h2 style="font-size: 8;color:yellow;text-align:center;background-color: black;">Charlie Puth - One Call Away</h2>
+	<h1><span  style="font-size: 5;background-color: #778899;color:white;">|｡･･)っ♪ Fantastic Music.</span></h1>
+</br>
+	<h2 style="font-size: 8;color:white;text-align:center;background-color: #778899;">Charlie Puth、Little Mix - Oops</h2>
 
-	<p style="text-align:center " >
+<!-- 	<p style="text-align:center " >
 		<object height="55" width="750" data="Charlie Puth - One Call Away.mp3" ></object>
-	</p>
+	</p> -->
+     <p style="text-align:center " >
+    <audio controls>
+        <source src="Charlie Puth、Little Mix - Oops.ogg" type="audio/ogg">
+        <source src="Charlie Puth、Little Mix - Oops.mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+    </audio>
+    </p>
+
+    <div>   
+         <a href="music02.html" ><img src="img/next.png" alt="next" style="float:right;clear:both;" width="50" height="50" ></a>
+    </div>
 
 <style type="text/css">
             * {
@@ -22,8 +35,8 @@
             }
 
             #lunbotu {
-                width: 750px;
-                height: 750px;
+                width: 500px;
+                height: 500px;
                 overflow: hidden;
                 position: relative;
                 margin: 0px auto;
@@ -32,7 +45,7 @@
 
             #banner {
                 height: 460px;
-                width: 3750px;
+                width: 2500px;
                 position: absolute;
                 transition: 2s;
                 left: 0px;
@@ -44,8 +57,8 @@
 
             #biao {
                 position: absolute;
-                top: 650px;
-                left: 38%;
+                top: 450px;
+                left: 28%;
              /* margin-left: -90px;*/
             }
 
@@ -63,16 +76,14 @@
             }
 
         </style>
-    </head>
 
-    <body>
-        <div id="lunbotu">
+        <div id="lunbotu" style="clear: both;">
             <div id="banner">
                 <img class="m" src="img/cha4.jpg" />
                 <img class="m" src="img/cha.jpg" />
                 <img class="m" src="img/cha3.jpg" />
                 <img class="m" src="img/cha2.jpg" />
-                <img class="m" src="img/cha1.jpg" />
+                <img class="m" src="img/chax1.jpg" />
             </div>
             <div id="biao">
                 <ul>
@@ -86,7 +97,7 @@
             </div>
         </div>
 
-    </body>
+
     <script type="text/javascript">
         var slid = document.getElementById("banner");
         //var id = document.getElementById("bt");
@@ -102,7 +113,7 @@
             time = setInterval(function(){
                 i++;
             if(i <= 4) {
-                slid.style.left = slid.offsetLeft - 750 + "px";
+                slid.style.left = slid.offsetLeft - 500 + "px";
                 oli[i].style.cssText="background:#ff6700;color:#fff;";
                 oli[i-1].style.cssText="background:none;color:#000;";
             } else {
@@ -131,7 +142,7 @@
             oli[j].onclick=function(){
                 clearInterval(time);
                 m=this.index;
-                slid.style.left=-m*750+"px";    
+                slid.style.left=-m*500+"px";    
                 i=m;
                 auto();
                 console.log(i);
@@ -140,9 +151,15 @@
 
     </script>
     </br>
-    <p style="text-align:center " >查理·普斯（Charlie Puth），1991年12月2日出生于美国新泽西州，毕业于亚利桑那西部学院。
+    <font size="4" face="新蒂小丸子小学版">
+   <p style="text-align:center " >
+        You've got me singing.</br>
+        你让我想唱歌~</br></br>
+         <u>查理·普斯（Charlie Puth），1991年12月2日出生于美国新泽西州，毕业于亚利桑那西部学院。
 </br>
-         身高:180cm（ 他两岁的时候被狗咬到了（好像有咬到眼睛），头部也受伤，之后眉毛就那样了。
+         身高:180cm！  (虽然经常拍成一米六。)
+</br>
+         外号：断眉（ 两岁的时候被狗咬到了之后眉毛就那样了）
 </br>
          2011年，查理·普斯将翻唱的歌曲上传至Youtube，由此获得了上百万的点击量。
 </br>
@@ -153,8 +170,8 @@
          2016年1月，发行首张专辑《Nine Track Mind》。
 </br>         
          代表作品Marvin Gaye、See You Again、One Call Away、Nine Track Mind
- </p>
-
+ </p></u>
+</font>
 	<a href="#" id="toTop" class="drop-in"><img src="img/drop.png" alt=" "></a>
 
 
